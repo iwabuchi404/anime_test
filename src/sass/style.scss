@@ -136,3 +136,83 @@ img{
     50%{background-position:100% 50%}
     100%{background-position:0% 50%}
 }
+
+.svg_test{
+    .section{
+        .p-svg {
+            display: flex;
+            flex-direction: column;
+            margin-top: 100px;
+            & + * {
+              margin-top: 160px;
+            }
+            &__title {
+              margin-bottom: 20px;
+            //   color: $color-text-sub1;
+            //   font-family: $font-family-code;
+              font-size: 14px;
+              font-weight: 600;
+              letter-spacing: 3px;
+            }
+            &__mask {
+              width: 892px;
+              height: 135px;
+            }
+            &__clip {
+              width: 892px;
+              height: 135px;
+            }
+            &__btn {
+              width: 160px;
+              height: 32px;
+              margin: 40px auto 0;
+            //   color: $color-text-base1;
+              font-size: 11px;
+            //   font-family: $font-family-code;
+              font-weight: 600;
+              text-transform: uppercase;
+              letter-spacing: 2px;
+            //   background: $color-bk-image;
+              cursor: pointer;
+              border-radius: 20px;
+              transition: all .5s ease;
+              &.hidden {
+                transition: opacity .5s ease;
+                visibility: hidden;
+                opacity: 0;
+              }
+              &:hover {
+                background: rgba(100,100,100, .6);
+              }
+              &.disabled {
+                // color: $color-text-base1;
+                background: rgba(100,100,100, .2);
+                pointer-events: none;
+              }
+            }
+          }
+          
+          .p-svg__path {
+            fill: none;
+            stroke: #fff;
+            &.sw13 {
+              stroke-width: 13px;
+            }
+            &.sw14 {
+              stroke-width: 14px;
+            }
+            &.sw15 {
+              stroke-width: 15px;
+            }
+            &.sw16 {
+              stroke-width: 16px;
+            }
+            &.sw19 {
+              stroke-width: 19px;
+            }
+            &.sw20 {
+              stroke-width: 20px;
+            }
+          }
+    }
+}
